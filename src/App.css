@@ -16,15 +16,17 @@ Keep for analog clock implementation
 } */
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(300px + 2vmin);
-  color: white;
+  color: #242423;
 }
+/* dark text: #242423 */
+/* brighter text: #282c34  */
 
 /* .App-link {
   color: #61dafb;

@@ -1,15 +1,22 @@
 import React from "react"
 
+const simplify = (date) => {
+    return date.toLocaleTimeString(navigator.language, {
+        hour: '2-digit',
+        minute: '2-digit'
+    })
+
+}
 
 class Clock extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { time: new Date().toLocaleTimeString('en-US') }
+        this.state = { time: simplify(new Date()) }
     }
 
     componentDidMount() {
         this.interval = setInterval(() => 
-            this.setState({ time: new Date().toLocaleTimeString('en-US')}))
+            this.setState({ time: simplify(new Date())}))
     }
 
     componentWillUnmount() {
